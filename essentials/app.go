@@ -2,14 +2,22 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func main() {
-	var investmentAmount = 1000
-	var expectedReturnRate = 5.5
-	var years = 10
+	var expenses, revenue, tax int
+	fmt.Print("Enter expenses: ")
+	fmt.Scan(&expenses)
+	fmt.Print("Enter revenue: ")
+	fmt.Scan(&revenue)
+	fmt.Print("Enter tax: ")
+	fmt.Scan(&tax)
 
-	var futureValue = float64(investmentAmount) * math.Pow(1+expectedReturnRate/100, float64(years))
-	fmt.Print(futureValue)
+	earningBeforeTax := revenue - expenses
+	earningAfterTax := earningBeforeTax - tax
+
+    ratio:=earningBeforeTax/earningAfterTax;
+    // Display output in one line
+    fmt.Printf("Earning before tax: %d, Earning after tax: %d, Ratio: %d\n", earningBeforeTax, earningAfterTax, ratio)
+
 }
