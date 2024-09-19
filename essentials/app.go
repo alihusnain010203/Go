@@ -18,6 +18,6 @@ func main() {
 
     ratio:=earningBeforeTax/earningAfterTax;
     // Display output in one line
-    fmt.Printf("Earning before tax: %d, Earning after tax: %d, Ratio: %d\n", earningBeforeTax, earningAfterTax, ratio)
+    fmt.Printf("Earning before tax: %d, Earning after tax: %d, Ratio: %f\n", earningBeforeTax, earningAfterTax, ratio)
 
 }
