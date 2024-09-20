@@ -21,6 +21,15 @@ func main() {
 	// fmt.Printf(`Earning before tax: %d,
 	//  Earning after tax: %d,
 	//   Ratio: %v`, earningBeforeTax, earningAfterTax, ratio)
+	
+	// Storing string in variable
+    RatioWithString:=fmt.Sprintf("Ratio is: %v",ratio)
     fmt.Printf("Earning before tax: %d\n, Earning after tax: %d\n, Ratio: %v\n", earningBeforeTax, earningAfterTax, ratio)
+	fmt.Print(RatioWithString)
+	sum := add(1, 2)
+	fmt.Printf("\nSum: %d", sum)
+}
 
+func add(a int, b int) int {
+	return a + b
 }
