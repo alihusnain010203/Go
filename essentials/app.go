@@ -44,4 +44,3 @@ func performCalculation(revenue, expenses, tax float64) (earningBeforeTax, earni
 	ratio = earningBeforeTax / earningAfterTax
 	return earningBeforeTax, earningAfterTax, ratio
 }
-
