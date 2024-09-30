@@ -1,0 +1,33 @@
+name: Auto Update Code
+
+# Trigger the workflow every 5 minutes
+on:
+  schedule:
+    - cron: '*/5 * * * *' # This runs the workflow every 5 minutes
+
+jobs:
+  update-code:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Make changes to the code by adding a line
+      - name: Modify code
+        run: |
+          echo 'fmt.Print("Hello Go")' >> main.go # Adjust this to the file and line you want to modify
+
+      # Step 3: Commit the changes
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add main.go
+          git commit -m "Auto-update: Added fmt.Print to main.go every 5 minutes"
+          
+      # Step 4: Push the changes back to the repository
+      - name: Push changes
+        run: |
+          git push origin main # Replace 'main' with your branch name if needed
