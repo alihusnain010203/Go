@@ -53,7 +53,7 @@ func main(){
 
 	slicesHobbies:=hobbies[:2]
 	// slicesHobbies = slicesHobbies[2:3]
-	slicesHobbies=slicesHobbies[1:3]
+	// slicesHobbies=slicesHobbies[1:3]/
 
 
 	fmt.Println(slicesHobbies)
