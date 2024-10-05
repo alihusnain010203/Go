@@ -22,6 +22,7 @@ func greet(msg string)  {
 func SleepAwake(doneChane chan bool)  {
 	fmt.Println("Sleeping for 5 seconds...")
 	 time.Sleep(5 * time.Second)
-	 fmt.Println("Awake now")
 	 doneChane <- true
+	 fmt.Println("Awake now")
+	
 }
